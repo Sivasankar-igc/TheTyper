@@ -3,6 +3,7 @@ import cors from "cors";
 import { user_collection, paragraph_collection } from "./database.js";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import path from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -216,10 +217,10 @@ async function saveParagraph() {
 
 // saveParagraph();
 
-web.use(express.static(__dirname + "/clientside/dist"))
+web.use(express.static(path.join(__dirname, "./clientside/dist")))
 web.get("*", (req,res)=>{
     try {
-        res.sendFile(__dirname + "/clientside/dist/index.html")
+        res.sendFile(path.join(__dirname, "./clientside/dist/index.html"))
     } catch (error) {
         console.log(`error in getting the clientside file ==> ${error}`)
     }
