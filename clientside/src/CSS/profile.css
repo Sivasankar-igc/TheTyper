@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-wrapper {
+    width: 100%;
+    height: 145vh;
+    background-color: rgba(2, 172, 240, 0.84);
+    box-sizing: border-box;
+}
+
+.profile-wrapper .profile-header {
+    height: 25%;
+    width: 100%;
+    display: flex;
+}
+
+/*------------------------------------------LOGO-CONTAINER---------------------------------------*/
+
+.profile-header #profile-logo-container {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-wrapper #profile-logo-container div {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border: .05em solid rgb(0, 0, 0);
+    background-image: url(../IMAGES/Screenshot_2023-09-13_172634-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size:130% 130%;
+    border-radius: 150px;
+    margin-left: .5vw;
+    top: 40px;
+}
+
+@media (max-width:1100px) {
+    .profile-wrapper #profile-logo-container div {
+        width: 140px;
+        height: 140px;
+        bottom: 70vh;
+    }
+}
+
+@media (max-width:980px) {
+    .profile-wrapper #profile-logo-container div {
+        width: 110px;
+        height: 110px;
+        top:8vh;
+    }
+}
+
+@media (max-width:765px) {
+    .profile-wrapper #profile-logo-container div {
+        width: 90px;
+        height: 90px;
+        top:11vh;
+    }
+}
+
+@media (max-width:600px) {
+    .profile-wrapper #profile-logo-container div {
+        width: 160px;
+        height: 160px;
+        margin-left: 100px;
+        top: 5.5%;
+    }
+}
+
+@media (max-width:530px) {
+    .profile-wrapper #profile-logo-container div {
+        width: 140px;
+        height: 140px;
+        top: 7%;
+    }
+}
+
+@media (max-height:550px) {
+    .profile-wrapper #profile-logo-container div {
+        top: 5vh;
+    }
+}
+
+@media (max-height:512px) {
+    .profile-wrapper #profile-logo-container div {
+        top: 2vh;
+    }
+}
+
+@media (max-height:464px) {
+    .profile-wrapper #profile-logo-container div {
+        top: 0;
+    }
+}
+
+@media (max-height:440px) {
+    .profile-wrapper #profile-logo-container div {
+        width: 140px;
+        height: 140px;
+        top: 2vh;
+    }
+}
+
+@media (max-height:395px) {
+    .profile-wrapper #profile-logo-container div {
+        width: 120px;
+        height: 120px;
+    }
+}
+@media (max-width:1112px) and (max-height:512px){
+    .profile-wrapper #profile-logo-container div{
+        width: 120px;
+        height: 120px;
+        top:30px;
+    }
+}
+
+/* ----------------USER-DETAILS------------------ */
+
+.profile-header .user-details {
+    width: 30%;
+    height: 99%;
+    display: block;
+    margin-left: .5%;
+}
+
+.profile-header .user-details div {
+    border: 1px solid white;
+    border-radius: 15px;
+    height: 10%;
+    width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14pt;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+}
+
+.profile-header .user-details div:nth-child(1) {
+    margin-top: 30px;
+    margin-left: -7%;
+}
+
+.profile-header .user-details div:nth-child(3) {
+    margin-left: -0.2%;
+}
+
+.profile-header .user-details div:nth-child(5) {
+    margin-left: -7%;
+}
+
+@media (max-width:1200px) {
+    .profile-header .user-details div {
+        width: 400px;
+        font-size: 12pt;
+    }
+}
+
+@media (max-width:980px) {
+    .profile-header .user-details div {
+        width: 40vw;
+        margin-bottom: 17px;
+        font-size: 1.7vw;
+    }
+}
+
+@media (max-width:765px) {
+    .profile-header .user-details div {
+        width: 40vw;
+        margin-bottom: 10px;
+        font-size: 1.7vw;
+    }
+
+    .profile-header .user-details div:nth-child(1) {
+        margin-top: 47px;
+        margin-left: -7%;
+    }
+}
+
+@media (max-width:600px) {
+    .profile-header .user-details {
+        margin-left: 90px;
+        margin-right: 2vw;
+    }
+
+    .profile-header .user-details div:nth-child(1) {
+        margin-top: 30px;
+        margin-left: -30px;
+    }
+
+    .profile-header .user-details div:nth-child(5) {
+        margin-left: -30px;
+    }
+
+    .profile-header .user-details div {
+        width: 65vw;
+        margin-bottom: 30px;
+        font-size: 2.7vw;
+    }
+}
+
+@media (max-width:465px) {
+    .profile-header .user-details div {
+        width: 62vw;
+    }
+}
+
+@media (max-width:410px) {
+    .profile-header .user-details div {
+        width: 60vw;
+    }
+}
+
+@media (max-height:512px) {
+    .profile-header .user-details div:nth-child(1) {
+        margin-top: 10px;
+    }
+
+    .profile-header .user-details div {
+        font-size: 4vh;
+        height: 15%;
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-height:464px) {
+    .profile-header .user-details div:nth-child(1) {
+        margin-top: 3px;
+    }
+}
+
+@media (max-height:435px) {
+    .profile-header .user-details div:nth-child(1) {
+        margin-top: 7px;
+    }
+
+    .profile-header .user-details div {
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-height:395px) {
+    .profile-header .user-details {
+        margin-left: -30px;
+    }
+
+    .profile-header .user-details div {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:1112px) and (max-height:512px){
+    .profile-header .user-details div{
+        height:20px;
+    }
+    .profile-header .user-details div:nth-child(1){
+        margin-top:15px;
+    }
+    .profile-header .user-details div span{
+        font-size:80%;
+    }
+}
+
+/*                XXX-----------HIGHLIGHTED-BOX DESIGN------------XXX*/
+
+.profile-header .highlighted-box {
+    height: 100%;
+    width: 45%;
+    margin-left: 11%;
+    display: flex;
+}
+
+.profile-header .highlighted-box div {
+    border: 1px solid black;
+    height: 16vh;
+    width: 20vw;
+    border-radius: 21px;
+    position: absolute;
+    margin-left: 1%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1.7vw;
+}
+
+.profile-header .highlighted-box div:nth-child(2n+1) {
+    left: 55vw;
+    top: 1vh;
+}
+
+.profile-header .highlighted-box div:nth-child(3) {
+    margin-top: 18.5vh;
+}
+
+.profile-header .highlighted-box div:nth-child(2n) {
+    left: 78vw;
+    top: 1vh;
+}
+
+.profile-header .highlighted-box div:nth-child(4) {
+    margin-top: 18.5vh;
+}
+
+.profile-header .highlighted-box span:nth-child(2n+1) {
+    position: absolute;
+    left: 20%;
+}
+
+.profile-header .highlighted-box span:nth-child(2n) {
+    position: absolute;
+    left: 80%;
+    top: 45%;
+    width: 3.2vw;
+    height: 3.2vw;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.profile-header .highlighted-box #average-accuracy span:nth-child(1) {
+    left: 12%;
+}
+
+.profile-header .highlighted-box #average-accuracy span:nth-child(2) {
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+
+.profile-header .highlighted-box span:nth-child(2n) span {
+    font-size: 1.2vw;
+    top: 23%;
+}
+
+.profile-header .highlighted-box #previous-score span:nth-child(2) span {
+    left: 35%;
+}
+
+.profile-header .highlighted-box #average-score span:nth-child(2) span {
+    left: 28%;
+}
+
+.profile-header .highlighted-box #highest-score span:nth-child(2) span {
+    left: 15%;
+}
+
+@media (max-width:980px) {
+    .profile-header .highlighted-box div {
+        height: 12vh;
+    }
+}
+
+@media (max-width:765px) {
+    .profile-header .highlighted-box div:nth-child(1) {
+        margin-top: 3vh;
+    }
+
+    .profile-header .highlighted-box div:nth-child(2) {
+        margin-top: 3vh;
+    }
+
+    .profile-header .highlighted-box span:nth-child(2n+1) {
+        margin-top: 10px;
+        font-size: 1.8vw;
+    }
+
+    .profile-header .highlighted-box span:nth-child(2n) {
+        top: 50%;
+        left: 75%;
+        text-align: center;
+    }
+
+    .profile-header .highlighted-box span:nth-child(2n) span {
+        font-size: 1.4vw;
+        top: -8px;
+    }
+}
+
+@media (max-width:600px) {
+    .profile-header .highlighted-box {
+        display: flexbox;
+        width: 100vw;
+        height: 44%;
+        position: absolute;
+        margin-left: 0;
+        top: 36%;
+    }
+
+    .profile-header .highlighted-box div {
+        width: 40%;
+        height: 40%;
+
+    }
+
+    .profile-header .highlighted-box div:nth-child(2n+1) {
+        left: 30px;
+    }
+
+    .profile-header .highlighted-box div:nth-child(2n) {
+        left: 52%;
+    }
+
+    .profile-header .highlighted-box div:nth-child(3) {
+        top: 35px;
+    }
+
+    .profile-header .highlighted-box div:nth-child(4) {
+        top: 35px;
+    }
+
+    .profile-header .highlighted-box div span:nth-of-type(2n+1) {
+        font-size: 3.5vw;
+    }
+
+    .profile-header .highlighted-box div span:nth-of-type(2n) {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .profile-header .highlighted-box .data span {
+        margin-top: 40%;
+    }
+}
+
+@media (max-height:590px) {
+    .profile-header .highlighted-box div .data {
+        width: 8vh;
+        height: 8vh;
+    }
+}
+
+@media (max-height:500px) {
+    .profile-header .highlighted-box div span:nth-of-type(2n+1) {
+        font-size: 10pt;
+    }
+    .profile-header .highlighted-box div:nth-of-type(n) .about{
+        font-size:18pt;
+    }
+}
+@media (max-height:410px){
+    .profile-header .highlighted-box div span:nth-of-type(2n+1) {
+        font-size: 9pt;
+    }
+}
+@media (max-width:1211px) and (max-height:501px){
+    .profile-header .highlighted-box div span:nth-of-type(2n+1) {
+        font-size: 10pt;
+    }
+    .profile-header .highlighted-box div:nth-of-type(n) .about{
+        font-size:14pt;
+    }
+}
+@media (max-width:988px) and (max-height:430px){
+    .profile-header .highlighted-box div .data{
+        width:25px;
+        height: 25px;
+    }
+    .profile-header .highlighted-box div:nth-child(n) .data:nth-child(n) span{
+        font-size:80%;
+    }
+}
+@media (max-width:817px) and (max-height:374px){
+    .profile-header .highlighted-box div:nth-child(n) .about:nth-child(n){
+        font-size: 10pt;
+    }
+    .profile-header .highlighted-box div .data{
+        width:22px;
+        height: 22px;
+        top:40%;
+    }
+}
+
+/*-------------------------------------------------------------------PROFILE-TABLE DESIGN-----------------------------------------------------------------*/
+.profile-wrapper .profile-table {
+    width: 100%;
+    height: 75%;
+    background-color: rgba(0, 0, 255, 0.179);
+    margin-top: .1%;
+    padding-top: 1vh;
+}
+
+.profile-table header {
+    width: 18vw;
+    height: 4vh;
+    margin-left: 42%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.profile-table .userData-table {
+    display: flex;
+    justify-content: center;
+    margin-top: .3%;
+    width: 98%;
+    min-height: fit-content;
+    max-height: 93%;
+    margin-left: .8%;
+    background-color: #0e72ff;
+
+    border: 2px solid rgb(6, 6, 6);
+    border-radius: 1.5vw;
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+.profile-table .userData-table table {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px hidden black;
+}
+
+.profile-table .userData-table table thead th {
+    position: sticky;
+    top: 0px;
+    background-color: #1f1f2a;
+}
+
+.profile-table .userData-table table thead th::after {
+    content: '';
+    width: 100%;
+    height: 2%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+}
+
+.profile-table .userData-table table th,
+td {
+    border: 1px solid black;
+    padding: 1% 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    line-height: 5vh;
+    font-size: 15pt;
+}
+
+.profile-table .userData-table table td {
+    padding: .1%;
+    font-family: monospace;
+    font-weight: normal;
+    font-size: 13pt;
+}
+
+.profile-table .userData-table::-webkit-scrollbar {
+    width: 20px;
+}
+
+.profile-table .userData-table::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+.profile-table .userData-table::-webkit-scrollbar-thumb {
+    background-color: aqua;
+    border-radius: 2rem;
+    border: .5rem solid transparent;
+    background-clip: content-box;
+}
+
+/*TABLE-RESPONSIVE*/
+@media(max-width:778px) {
+    .profile-table .userData-table table th {
+        font-size: 10pt;
+    }
+
+    .profile-table .userData-table table td {
+        font-size: 10pt;
+    }
+}
+
+@media(max-width:584px) {
+    .profile-table .userData-table table th {
+        font-size: 9pt;
+    }
+
+    .profile-table .userData-table table td {
+        font-size: 8pt;
+    }
+}
+
+@media(max-width:484px) {
+    .profile-table .userData-table table td {
+        font-size: 9.2pt;
+        line-height: 2vh;
+    }
+}
+
+@media(max-width:348px) {
+    .profile-table .userData-table table td {
+        font-size: 8.2pt;
+        line-height: 2.8vh;
+    }
+}
+
+@media(max-width:292px) {
+    .profile-table .userData-table table th:nth-child(5) {
+        padding-left: 1%;
+        font-size: 8.2pt;
+    }
+}
+
+@media(max-width:810px) {
+    .profile-table header {
+        width: 25vw;
+        height: 4vh;
+        font-size: 2.5vw;
+        margin-left: 38%;
+    }
+}
+
+@media(max-width:600px) {
+    .profile-wrapper .profile-table {
+        position: absolute;
+        top: 80%;
+    }
+}
+
+@media(min-width:199px) and (max-width:378px) {
+    .profile-table header {
+        width: 30vw;
+        height: 4vh;
+        font-size: 3.5vw;
+        margin-left: 38%;
+    }
+}
+
+/* RESPONSIVE WIDTH AND HEIGHT*/
+@media (max-width:1066px) and (max-height:513px){
+    .profile-header .highlighted-box div span:nth-of-type(2n+1) {
+        font-size: 10pt;
+    }
+    .profile-header .highlighted-box div:nth-of-type(n) .about{
+        font-size:12pt;
+    }
+    .profile-header .user-details div {
+        font-size: 100%;
+    }
+}

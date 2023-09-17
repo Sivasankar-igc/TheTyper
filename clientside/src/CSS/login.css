@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../IMAGES/2024261.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100vw 100vh;
+    background-color: rgba(12, 15, 15, 0.455);
+    background-blend-mode: darken;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------IMAGE-CONTAINER------------- */
+.login-container #image-container {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+
+    background-image: url(../IMAGES/login_person_photo-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 140px 140px;
+    border-radius: 100px;
+    left: 33%;
+    bottom: 63vh;
+    background-color: rgb(255, 255, 255);
+}
+@media (max-width:340px){
+    .login-container #image-container{
+        width:35vw;
+        height:35vw;
+        background-size: 35vw 35vw;
+        bottom: 65vh;
+    }
+}
+@media (min-height:383px) and (max-height:466px){
+    .login-container #image-container{
+        width: 80px;
+        height:80px;
+        background-size: 80px 80px;
+        bottom:85vh;
+        margin-left:8%;
+    }
+}
+@media (max-height:383px){
+    .login-container #image-container{
+        display:none;
+    }
+}
+@media (min-width:1497px) and (min-height:653px){
+    .login-container #image-container{
+        bottom:58vh;
+    }
+}
+/* -----------------------LOGIN-INPUT-CONTAINER----------------------- */
+.login-container {
+    background: linear-gradient(to bottom, rgb(0, 119, 255, .4), rgba(255, 255, 255, .4));
+    width: 420px;
+    height: 470PX;
+    border-radius: 1.5vw;
+    backdrop-filter: blur(3px);
+    box-shadow: 5px 5px 15px rgb(4, 62, 123);
+
+    z-index: 1;
+}
+
+.login-container #userid-input {
+    margin-top: 35%;
+}
+
+.login-container input:nth-child(n) {
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: .5px;
+    margin-left: 8%;
+    margin-bottom: 15%;
+    padding: 0% 2%;
+    font-size: 18px;
+
+    width: 80%;
+    height: 8%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+}
+
+.login-container label:nth-child(n) {
+    position: absolute;
+    font-size: 10px;
+    left: 8%;
+    font-weight: bold;
+    letter-spacing: .3px;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: translateY(-680%);
+    transition: .3s all ease;
+}
+
+.login-container input:hover~label,
+.login-container input:focus~label,
+.login-container input:valid~label {
+    transform: translateY(-850%);
+}
+
+.login-container #password-input span {
+    position: absolute;
+    right: 8%;
+    background-image: url(../IMAGES/icons8-show-password-50.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 15px 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+@media (max-width:430px) {
+    .login-container {
+        width: 98vw;
+    }
+
+    .login-container #userid-input {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width:300px) {
+    .login-container label:nth-child(n) {
+        transform: translateY(-520%);
+    }
+
+    .login-container input:hover~label,
+    .login-container input:focus~label,
+    .login-container input:valid~label {
+        transform: translateY(-680%);
+    }
+    .login-container input:nth-child(n) {
+        font-size: 14px;
+    }
+}
+@media (min-width:300px) and (max-width:400px) {
+    .login-container label:nth-child(n) {
+        transform: translateY(-70px);
+    }
+
+    .login-container input:hover~label,
+    .login-container input:focus~label,
+    .login-container input:valid~label {
+        transform: translateY(-85px);
+    }
+    .login-container input:nth-child(n) {
+        font-size: 14px;
+    }
+}
+
+
+/* ----------------ANCHOR-TAG--------------- */
+
+.login-container a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-left: 18%;
+    position: absolute;
+    top: 85%;
+    transition: .3s all ease;
+}
+
+.login-container a:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width:430px) {
+    .login-container a {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width:300px) {
+    .login-container a {
+        font-size: 5.6vw;
+        margin-left: 12%;
+    }
+}
+@media (min-height:477px) and (max-height:600px){
+    .login-container a{
+        top:70vh;
+    }
+}
+@media (max-height:477px){
+    .login-container a{
+        top:85vh;
+    }
+}
+
+/* -----------------------LOGIN-BUTTON----------------------- */
+
+.login-wrapper button {
+    cursor: pointer;
+    width: 360PX;
+    height: 60px;
+
+    position: absolute;
+    top: 82vh;
+    margin-left: 0%;
+
+    border-radius: 30px;
+    background-color: black;
+    -webkit-text-fill-color: white;
+    letter-spacing: 8px;
+    font-size: 15px;
+
+    z-index: 2;
+    box-sizing: border-box;
+    transition: .3s all ease;
+}
+
+.login-wrapper button:hover {
+    -webkit-text-fill-color: aqua;
+    transform: scale(0.92);
+    box-shadow: 1px 1px 5px aqua;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: aqua;
+}
+
+@media (max-width:380px) {
+    .login-wrapper button {
+        width: 82vw;
+        height:10vw;
+        top:83%;
+        font-size:5vw;
+    }
+}
+@media (min-height:478px) and (max-height:600px){
+    .login-wrapper button{
+        top:85vh;
+    }
+}
+@media (max-height:477px){
+    .login-wrapper button{
+        top:90vh;
+    }
+}
+@media (min-width:1497px) and (min-height:653px){
+    .login-wrapper button{
+        top: 78vh;
+    }
+}

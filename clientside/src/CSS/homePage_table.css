@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+}
+.wrapper .topTableData {
+    width: 100%;
+    height: 75%;
+    background-color: rgba(0, 0, 255, 0.179);
+    margin-top: 5%;
+    padding-top: 1vh;
+}
+
+.topTableData header {
+    width: 18vw;
+    height: 4vh;
+    margin-left: 42%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.topTableData .topData-table {
+    display: flex;
+    justify-content: center;
+    margin-top: .3%;
+    width: 98%;
+    min-height: fit-content;
+    max-height: 93%;
+    margin-left: .8%;
+    background-color: #0e72ff;
+
+    border: 2px solid rgb(6, 6, 6);
+    border-radius: 1.5vw;
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+.topTableData .topData-table table {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px hidden black;
+}
+
+.topTableData .topData-table table thead th {
+    position: sticky;
+    top: 0px;
+    background-color: #1f1f2a;
+    z-index: 1;
+}
+
+.topTableData .topData-table table thead th::after {
+    content: '';
+    width: 100%;
+    height: 2%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+}
+
+.topTableData .topData-table table th,
+td {
+    border: 1px solid black;
+    padding: 1% 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    line-height: 5vh;
+    font-size: 15pt;
+}
+
+.topTableData .topData-table table td {
+    padding: .1%;
+    font-family: monospace;
+    font-weight: normal;
+    font-size: 13pt;
+}
+
+.topTableData .topData-table::-webkit-scrollbar {
+    width: 20px;
+}
+
+.topTableData .topData-table::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+.topTableData .topData-table::-webkit-scrollbar-thumb {
+    background-color: aqua;
+    border-radius: 2rem;
+    border: .5rem solid transparent;
+    background-clip: content-box;
+}
+
+/*TABLE-RESPONSIVE*/
+@media(max-width:778px) {
+    .topTableData .topData-table table th {
+        font-size: 10pt;
+    }
+
+    .topTableData .topData-table table td {
+        font-size: 10pt;
+    }
+}
+
+@media(max-width:584px) {
+    .topTableData .topData-table table th {
+        font-size: 9pt;
+    }
+
+    .topTableData .topData-table table td {
+        font-size: 8pt;
+    }
+}
+
+@media(max-width:484px) {
+    .topTableData .topData-table table td {
+        font-size: 9.2pt;
+        line-height: 2vh;
+    }
+}
+
+@media(max-width:348px) {
+    .topTableData .topData-table table td {
+        font-size: 8.2pt;
+        line-height: 2.8vh;
+    }
+}
+
+@media(max-width:292px) {
+    .topTableData .topData-table table th:nth-child(5) {
+        padding-left: 1%;
+        font-size: 8.2pt;
+    }
+}
+
+@media(max-width:810px) {
+    .topTableData header {
+        width: 25vw;
+        height: 4vh;
+        font-size: 2.5vw;
+        margin-left: 38%;
+    }
+}
+
+@media(min-width:199px) and (max-width:378px) {
+    .topTableData header {
+        width: 30vw;
+        height: 4vh;
+        font-size: 3.5vw;
+        margin-left: 38%;
+    }
+}
+@media (max-height:464px){
+    .wrapper .topTableData{
+        margin-top:8%;
+    }
+}

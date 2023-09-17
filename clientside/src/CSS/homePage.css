@@ -1,0 +1,176 @@
+.wrapper{
+    width:100%;
+    height:220vh;
+}
+.navigation{
+    width:100%;
+    height:50px;
+    /* margin-top:-2.45%; */
+    background-color:#3399ff;
+    position:fixed;
+    overflow: hidden;
+    z-index: 2;
+}
+.navigation ul{
+    list-style-type:none;
+}
+
+/*------------------LOGO-CONTAINER--------------------*/
+.navigation .logo-img{
+    float:left;
+    height:100%;
+    width:80px;
+}
+.navigation .logo-img div{
+    width:100%;
+    height:100%;
+    background-image: url(../IMAGES/logo.png);
+    background-repeat: no-repeat;
+    background-position:40% 30% ;
+    background-size:48px 48px;
+    margin-top:0;
+}
+/*-----------------------NAV-ITEMS-------------------------------*/
+.navigation .navigation-items{
+    float:right;
+    height:100%;
+    width:500px;
+    position: relative;
+    bottom:2%;
+    text-align: center;
+}
+.navigation .navigation-items li{
+    display:inline-block;
+    line-height: 50px;
+    margin-right:5px;
+}
+.navigation .navigation-items li a{
+    width:120px;
+    height:37px;
+    margin-top:5%;
+    margin-right:35px;
+    letter-spacing: 2px;
+    font-size:12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(8, 8, 8);
+
+    transition: .5s all ease;
+}
+.navigation .navigation-items li:nth-child(1){
+    margin-left:25%;
+}
+.navigation .navigation-items li a:hover{
+    font-size: 12pt;
+    background-color:#87c6e2;
+    padding:8px 5px;
+    font-weight: bold;
+    cursor:pointer;
+}
+.navigation .navigation-items li a:focus{
+    font-size: 12pt;
+    background-color:#87c6e2;
+    padding:8px 5px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+/*-------------HAMBURGER-------------------*/
+.navigation #check {
+    float: right;
+    display: block;
+    position: absolute;
+    margin-top:20px;
+    right:15px;
+    background-color: transparent;
+    color: transparent;
+    display: none;
+}
+
+.navigation #checkbtn {
+    display: none;
+    float: right;
+    margin-right: 1.2%;
+}
+
+#checkbtn ul {
+    list-style-type: none;
+}
+
+#checkbtn .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    background-color: white;
+    margin-top: 9px;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+#check:checked~.navigation-items {
+    right: 0rem;
+}
+
+@media (max-width:760px){
+
+    .navigation #checkbtn {
+        display: block;
+    }
+    
+    .navigation .navigation-items {
+        display:block;
+        position: fixed;
+        width: 180px;
+        
+        /* margin-right:-40px; */right: 0;
+        top:-250px;
+        height: 200px;
+        z-index: 1;
+        transition: 1s all ease;
+    }
+    .navigation .navigation-items li{
+        margin-bottom:5%;
+    }
+    .navigation .navigation-items li a{
+        background-color:aqua;
+        padding:10px 5px;
+        text-align: center;
+        border-radius: 8px;
+    }
+    .navigation .navigation-items li:nth-child(2) a{
+        position: relative;
+        left:20%;
+        letter-spacing: 3.4px;
+    }
+    .navigation .navigation-items li:nth-child(3){
+        position: relative;
+        left:13%;
+    }
+    .navigation #check:checked~.navigation-items{
+        top:50px;
+        margin-right:-40px;
+    }
+}
+
+
+
+/*--------------------------LOGO-NAME-CONTAINER---------------------------*/
+.navigation .logo-name{
+   position:absolute;
+   width:300px;
+   height: 100%;
+   margin-left:70px;
+   text-align: center;
+}
+.navigation .logo-name span{
+    color:white;
+    font-family:monospace;
+    font-size:20px;
+    margin-right:60%;
+    position: relative;
+    top:25%;
+    font-stretch: expanded;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+

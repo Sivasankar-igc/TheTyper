@@ -1,0 +1,267 @@
+.typingArea {
+    border: .1px solid rgba(0, 0, 0, 0);
+    height: 30%;
+    position: relative;
+    top: 50px;
+    z-index: 1;
+}
+
+.typingArea input {
+    position: fixed;
+    top: -10000px;
+}
+
+/*----------------------PARAGRAPH-CONTAINER----------------------*/
+.typingArea .paragraph-container {
+    width: 70vw;
+    height: 60%;
+    margin-left: 15%;
+    margin-top: 5vh;
+    border: 20px solid red;
+    border-radius: 50px;
+    text-align: justify;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.typingArea .paragraph-container::-webkit-scrollbar{
+    width: 0;
+}
+
+.typingArea .paragraph-container p {
+    margin: 1% 1%;
+    font-size: calc(1.4vw);
+    font-family: monospace;
+}
+
+@media (max-width:900px) {
+    .typingArea .paragraph-container {
+        width: 95%;
+        margin-left: .4%;
+        border: 2vw solid red;
+        border-radius: 5vw;
+    }
+}
+@media (max-width:1158px){
+    .typingArea .paragraph-container p{
+        font-size:1.68vw;
+    }
+}
+@media (max-width:900px){
+    .typingArea .paragraph-container p{
+        font-size:2.17vw;
+    }
+}
+@media (max-width:690px){
+    .typingArea .paragraph-container p{
+        font-size:2.5vw;
+    }
+}
+@media (max-width:510px){
+    .typingArea .paragraph-container p{
+        font-size:2.9vw;
+    }
+}
+@media (max-height:594px){
+    .typingArea .paragraph-container p{
+        font-size:3.4vh;
+    }
+}
+@media (max-width:1240px) and (max-height:594px){
+    .typingArea .paragraph-container p{
+        font-size:3vh;
+    }
+}
+
+/*-------------------------PROGRESS-FILED-------------------------*/
+.typingArea .progress-field {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    height:7.5%;
+}
+
+.typingArea .progress-field div {
+    border: 4px solid black;
+    width: 15%;
+    height: 85%;
+    display: flex;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.typingArea .progress-field div:nth-child(1) {
+    margin-left: 4%;
+}
+
+.typingArea .progress-field div span {
+    font-family: cursive;
+    font-weight: bold;
+    font-size:10pt;
+}
+.typingArea .progress-field div:nth-child(4) span{
+    font-size: .85vw;
+    font-weight:900;
+}
+.typingArea .progress-field div:nth-child(5) span{
+    font-size: .85vw;
+    font-weight:900;
+}
+
+.typingArea .progress-field div p {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+@media (max-width:900px){
+    .typingArea .progress-field div {
+        width: 25%;
+    }
+    .typingArea .progress-field div:nth-child(1) {
+        margin-left: .1%;
+    }
+    .typingArea .progress-field div:nth-child(4) span{
+        font-size: 1.3vw;
+        font-weight:900;
+    }
+    .typingArea .progress-field div:nth-child(5) span{
+        font-size: 1.2vw;
+        font-weight:900;
+    }
+    .typingArea .progress-field div p {
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 2vw;
+    }
+    .typingArea .progress-field div:nth-child(2) span {
+        font-size: 1.8vw;
+    }
+    .typingArea .progress-field div:nth-child(2) p {
+        font-size: 11pt;
+    }
+    .typingArea .progress-field div:nth-child(3) p {
+        font-size: 13pt;
+    }
+}
+@media (max-width:665px){
+    .typingArea .progress-field div:nth-child(2) p {
+        font-size: 1.7vw;
+    }
+}
+@media (max-width:621px){
+
+    .typingArea .progress-field div{
+        border: 2px solid black;
+    }
+    .typingArea .progress-field div span{
+        font-size:2vw;
+    }
+    .typingArea .progress-field div:nth-child(3) span{
+        font-size:2.4vw;
+    }
+    .typingArea .progress-field div:nth-child(4) span {
+        font-size: 1.9vw;
+        font-weight:900;
+    }
+    .typingArea .progress-field div:nth-child(5) span{
+        font-size: 1.7vw;
+        font-weight:900;
+    }
+    .typingArea .progress-field div:nth-child(2) p {
+        font-size: 9pt;
+    }
+    .typingArea .progress-field div:nth-child(3) p {
+        font-size: 13pt;
+    }
+
+    .typingArea .progress-field div:nth-child(4) p{
+        position:absolute;
+        right:28%;
+        margin-top:12px;
+        font-size:3vw; 
+    }
+    .typingArea .progress-field div:nth-child(5) p{
+        position:absolute;
+        right:8%;
+        margin-top:12px;
+        font-size:3vw; 
+    }
+}
+
+/*----------------BUTTON-----------------------*/
+.typingArea button {
+    width: 18%;
+    height: 30px;
+    border: 2.5px solid black;
+    border-radius: 25px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    font-size: 14px;
+    margin-top: 1.2%;
+    margin-left: 20%;
+    letter-spacing: 3px;
+}
+@media (max-width:900px){
+    .typingArea button{
+        margin-left:10%;
+        font-size:1.5vw;
+    }
+}
+@media (max-width:621px){
+    .typingArea button{
+        width:25%;
+        margin-left:7%;
+        font-size:2vw;
+    }
+}
+
+/*--------------------------------PARAGRAPH-CHOOSING---------------------------*/
+.typingArea #paragraph-heading {
+    width: 18%;
+    height: 30px;
+    border: 2.5px solid black;
+    border-radius: 25px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 15pt;
+    margin-left: 67%;
+    margin-top: 1.2%;
+
+}
+
+.typingArea #paragraph-heading option {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 100%;
+    width: 500px;
+}
+@media(max-width:1287px){
+    .typingArea #paragraph-heading{
+        font-size:1.5vw;
+    }
+}
+@media (max-width:900px){
+    .typingArea #paragraph-heading{
+        margin-left:72%;
+    }
+}
+@media (max-width:720px){
+    .typingArea #paragraph-heading option{
+        font-size:2vw;
+    }
+}
+@media (max-width:621px){
+    .typingArea #paragraph-heading{
+        width:25%;
+        margin-left:68%;
+        font-size:2.3vw;
+    }
+    .typingArea #paragraph-heading option{
+        font-size:2.3vw;
+    }
+}
