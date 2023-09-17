@@ -215,13 +215,13 @@ async function saveParagraph() {
 }
 
 // saveParagraph();
-console.log();
+
 web.use(express.static(__dirname + "/clientside/dist"))
 web.get("*", (req,res)=>{
     try {
         res.sendFile(__dirname + "/clientside/dist/index.html")
     } catch (error) {
-        console.error(`Error in fetching the clientside ==> ${error}`)
+        console.log(`error in getting the clientside file ==> ${error}`)
     }
 })
 
