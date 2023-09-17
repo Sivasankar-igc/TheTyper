@@ -1,7 +1,11 @@
 import express from "express";
 import cors from "cors";
 import { user_collection, paragraph_collection } from "./database.js";
-import path from "path";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const web = express();
 web.use(express.urlencoded({ extended: false }));
@@ -211,11 +215,11 @@ async function saveParagraph() {
 }
 
 // saveParagraph();
-
-web.use(express.static("N:/ONLINE_TYPING_MASTER/server/clientside/dist"))
+console.log();
+web.use(express.static(__dirname + "/clientside/dist"))
 web.get("*", (req,res)=>{
     try {
-        res.sendFile("N:/ONLINE_TYPING_MASTER/server/clientside/dist/index.html")
+        res.sendFile(__dirname + "/clientside/dist/index.html")
     } catch (error) {
         console.error(`Error in fetching the clientside ==> ${error}`)
     }

@@ -52,6 +52,7 @@
     position: sticky;
     top: 0px;
     background-color: #1f1f2a;
+    color: rgb(255, 255, 255);
     z-index: 1;
 }
 
@@ -67,7 +68,7 @@
 
 .topTableData .topData-table table th,
 td {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     padding: 1% 0;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;

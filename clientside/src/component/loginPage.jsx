@@ -34,7 +34,7 @@ const LogIn = () => {
                         <input type="password" ref={pass} id="password" onChange={(e) => setPassword(e.target.value)} required/> <span id="show-password" onClick={showPassword}></span><br />
                         <label htmlFor="password">PASSWORD</label>
                     </div>
-                    <a href="http://localhost:5173/signInPage">Don't have an account ?</a>                    
+                    <a onClick={() => navigate("/signInPage")}>Don't have an account ?</a>                    
                 </div>
                 <button onClick={handleSubmit}>LOG IN</button>
             </div>

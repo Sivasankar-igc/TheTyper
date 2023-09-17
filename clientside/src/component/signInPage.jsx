@@ -49,7 +49,7 @@ const SignIn = () => {
                     </div>
                     {/* <input type="checkbox" name="t&c" id="t&c"/> */}
 
-                    <a href="http://localhost:5173/loginPage" target="_parent" rel="noopener noreferrer">Have An Account ?</a>
+                    <a onClick={() => navigate("/logInPage")} target="_parent" rel="noopener noreferrer">Have An Account ?</a>
                     
                 </div>
                 <button onClick={handleSignIn}>SIGN IN</button>
