@@ -212,10 +212,10 @@ async function saveParagraph() {
 
 // saveParagraph();
 
-web.use(express.static("N:/ONLINE_TYPING_MASTER/server/clientside/dist"))
+web.use(express.static("./clientside/dist"))
 web.get("*", (req,res)=>{
     try {
-        res.sendFile("N:/ONLINE_TYPING_MASTER/server/clientside/dist/index.html")
+        res.sendFile("./clientside/dist/index.html")
     } catch (error) {
         console.error(`Error in fetching the clientside ==> ${error}`)
     }
