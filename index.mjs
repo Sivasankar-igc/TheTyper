@@ -217,10 +217,10 @@ async function saveParagraph() {
 
 // saveParagraph();
 
-web.use(express.static(path.join(__dirname, "./clientside/dist")))
+web.use(express.static(path.join(__dirname, "/clientside/dist")))
 web.get("*", (req,res)=>{
     try {
-        res.sendFile(path.join(__dirname, "./clientside/dist/index.html"))
+        res.sendFile(path.join(__dirname, "/clientside/dist/index.html"))
     } catch (error) {
         console.log(`error in getting the clientside file ==> ${error}`)
     }
