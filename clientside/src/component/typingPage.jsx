@@ -16,7 +16,7 @@ const TypingPage = () => {
     let index = 0;
     let totalWords = paragraph.trim().split(" ").length;
     let isTimerCalled = false;
-    let time = 160;
+    let time = 120;
 
     const navigate = useNavigate();
     const loc = useLocation();
