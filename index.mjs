@@ -104,7 +104,7 @@ web.post("/chooseParagraph", async (req, res) => {
 
 web.post("/saveUserData", async (req, res) => {
     try {
-        const { user, wpm, accuracy, paragraph } = req.body;
+        const { user, paragraph, gross_wpm, accuracy } = req.body;
         const findUser = await user_collection.findOne({ userId: user });
         const PName = await paragraph_collection.findOne({ PContent: paragraph });
         if (findUser != null) {
@@ -113,14 +113,14 @@ web.post("/saveUserData", async (req, res) => {
                     data: {
                         time: getTime(),
                         passage: PName.PName,
-                        wpm: wpm,
+                        wpm: gross_wpm,
                         accuracy: accuracy
                     }
                 },
                 $inc: { totalMatch: 1 }
             })
-            if (findUser.highestWpm < wpm) {
-                await user_collection.updateOne({ userId: user }, { $set: { highestWpm: wpm, highestAccuracy: accuracy, highestOnPassage: PName.PName } })
+            if (findUser.highestWpm < gross_wpm) {
+                await user_collection.updateOne({ userId: user }, { $set: { highestWpm: gross_wpm, highestAccuracy: accuracy, highestOnPassage: PName.PName } })
             }
         }
     } catch (error) {

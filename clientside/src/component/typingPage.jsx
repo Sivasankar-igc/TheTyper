@@ -45,9 +45,9 @@ const TypingPage = () => {
             .catch((err) => console.error(err))
     }, [])
 
-    const saveUserData = (wpm, accuracy) => {
+    const saveUserData = (gross_wpm, accuracy) => {
         const user = loc.state.userId;
-        axios.post("/saveUserData", { user, paragraph, wpm, accuracy })
+        axios.post("/saveUserData", { user, paragraph, gross_wpm, accuracy })
             .then(() => console.log("the data has been saved"))
             .catch((err) => console.error(err))
     }
@@ -67,12 +67,14 @@ const TypingPage = () => {
             }
         })
 
-        let gross_wpm = Math.floor(wordsOfTypedParagraph/(time/60));
-        let net_wpm = Math.floor(gross_wpm - (wrongWords/(time/60)));
-        let accuracy = ((net_wpm/gross_wpm)*100).toFixed(2);
+        time = Number(((120- time)/60).toFixed(2));
 
+        let gross_wpm = Math.floor(wordsOfTypedParagraph.length/time);
+        let net_wpm = Math.floor(gross_wpm - (wrongWords/time));
+        let accuracy = Number(((net_wpm/gross_wpm)*100).toFixed(2));
+        
         document.querySelector("#wpm").innerHTML = `${gross_wpm}`;
-        document.querySelector("#accuracy").innerHTML = `${accuracy}%`;
+        document.querySelector("#accuracy").innerHTML = `${accuracy.toFixed(2)}%`;
         document.querySelector("#totalwords").innerHTML = `${wordsOfTypedParagraph.length}`;
         document.querySelector("#correct-words").innerHTML = `${correctWords}`;
 

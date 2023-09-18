@@ -22,7 +22,7 @@ const TopPlayerTableHead = ({playerData})=>{
                                     <td>{rank++}</td>
                                     <td>{i.userId}</td>
                                     <td>{i.highestWpm}</td>
-                                    <td>{i.highestAccuracy}</td>
+                                    <td>{i.highestAccuracy}%</td>
                                     <td>{i.highestOnPassage}</td>
                                 </tr>
                             ))

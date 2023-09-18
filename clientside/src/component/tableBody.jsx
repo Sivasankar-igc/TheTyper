@@ -14,7 +14,7 @@ const TableBody = ({ userData}) => {
                         <td>{i.time}</td>
                         <td>{i.passage}</td>
                         <td>{i.wpm}</td>
-                        <td>{i.accuracy}</td>
+                        <td>{i.accuracy}%</td>
                     </tr>
                 )
                 
