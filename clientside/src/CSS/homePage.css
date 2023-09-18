@@ -79,11 +79,10 @@
     float: right;
     display: block;
     position: absolute;
-    margin-top:20px;
     right:15px;
     background-color: transparent;
     color: transparent;
-    display: none;
+    top:-2000000000000000px;
 }
 
 .navigation #checkbtn {
@@ -110,6 +109,9 @@
     right: 0rem;
 }
 
+#checkbtn:checked~.navigation-items{
+    right:0rem;
+}
 @media (max-width:760px){
 
     .navigation #checkbtn {
@@ -120,8 +122,7 @@
         display:block;
         position: fixed;
         width: 180px;
-        
-        /* margin-right:-40px; */right: 0;
+        right: 0;
         top:-250px;
         height: 200px;
         z-index: 1;

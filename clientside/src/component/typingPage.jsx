@@ -37,7 +37,6 @@ const TypingPage = () => {
         })
 
         document.addEventListener("keydown", () => input_field.current.focus());
-        // paragraph_field.current.addEventListener("click", () => input_field.current.focus());
     }, [])
 
     useEffect(() => {
@@ -63,29 +62,21 @@ const TypingPage = () => {
             if (word === wordsOfParagraph[index++]) {
                 correctWords++;
             }
-        })
-
-        let wpm = Math.floor(wordsOfTypedParagraph.length / (60 / 60))
-
-        let lettersOfParagraph = paragraph.split("");
-        let lettersOfTypedParagraph = input_field.current.value.split("");
-        index = 0;
-        let correctLetters = 0;
-
-        lettersOfTypedParagraph.forEach(letter => {
-            if (letter === lettersOfParagraph[index++]) {
-                correctLetters++;
+            else{
+                wrongWords++;
             }
         })
 
-        let accuracy = ((correctLetters / lettersOfTypedParagraph.length) * 100).toFixed(2);
+        let gross_wpm = Math.floor(wordsOfTypedParagraph/(time/60));
+        let net_wpm = Math.floor(gross_wpm - (wrongWords/(time/60)));
+        let accuracy = ((net_wpm/gross_wpm)*100).toFixed(2);
 
-        document.querySelector("#wpm").innerHTML = `${wpm}`;
+        document.querySelector("#wpm").innerHTML = `${gross_wpm}`;
         document.querySelector("#accuracy").innerHTML = `${accuracy}%`;
         document.querySelector("#totalwords").innerHTML = `${wordsOfTypedParagraph.length}`;
         document.querySelector("#correct-words").innerHTML = `${correctWords}`;
 
-        saveUserData(wpm, accuracy);
+        saveUserData(gross_wpm, accuracy);
     }
 
     let stop;
