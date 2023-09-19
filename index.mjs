@@ -68,9 +68,10 @@ web.post("/signIn", async (req, res) => {
     try {
         const { emailId, password, userId } = req.body;
 
-        const isUserExist = await user_collection.findOne({ emailId: emailId });
+        const isUserMailExist = await user_collection.findOne({ emailId: emailId });
+        const isUserNameExist = await user_collection.findOne({userId: userId});
 
-        if (isUserExist === null) {
+        if (isUserNameExist === null && isUserMailExist === null) {
             const user = new user_collection({
                 emailId: emailId,
                 password: password,
@@ -83,10 +84,15 @@ web.post("/signIn", async (req, res) => {
 
             data != null ? res.status(200).send("userSaved") : res.status(200).send("user couldn't be saved");
         }
-        else {
-            res.status(200).send("userExist");
+        else if(isUserMailExist !== null){
+            res.status(200).send("userMailExist");
         }
+        else if(isUserNameExist !== null){
+            res.status(200).send("userNameExist");
+        }
+        
     } catch (error) {
+        res.send(200).send("user couldn't be saved");
         console.error(error);
     }
 })
